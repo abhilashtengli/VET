@@ -5,6 +5,7 @@ import McAbout from "./McAbout";
 import McApproval from "./McApproval";
 import McCourse from "./McCourse";
 import McFaq from "./McFaq";
+import Footer from "./Footer";
 
 const MainContainer = () => {
   return (
@@ -17,6 +18,7 @@ const MainContainer = () => {
       <McApproval />
       <McCourse />
       <McFaq />
+      <Footer/>
     </>
   );
 };
