@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <div className="flex justify-end  items-center mb-20 border border-red-600">
+      <div className="flex justify-end items-center mb-20 border border-red-600">
         <div className="w-1/3 mt-32  mr-20 border p-5 rounded-lg border-black">
           <form className="h-2/3">
             <label className="mt-4 font-semibold">Name</label>
