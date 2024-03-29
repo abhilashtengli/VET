@@ -1,18 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGoogle,
-  faInstagram,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faEnvelope,
-  faHome,
-  faMailBulk,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import React from "react";
 
+import { faEnvelope, faHome, faPhone } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import { Link } from "react-router-dom";
+import { navItems } from "../Utils/Constants";
+import { faIcon } from "../Utils/Constants";
+import { InstTiming } from "../Utils/Constants";
 const Footer = () => {
   return (
     <>
@@ -28,21 +21,18 @@ const Footer = () => {
         <div className="w-[12%]">
           <h2 className="font-bold ml-7 text-2xl">Quick Links</h2>
           <ul className="mt-2 ml-8">
-            <li className=" cursor-pointer">Home</li>
-            <li className=" cursor-pointer">About Us</li>
-            <li className=" cursor-pointer">Courses</li>
-            <li className=" cursor-pointer">Admission</li>
-            <li className=" cursor-pointer">News & Events</li>
-            <li className=" cursor-pointer">Facilities</li>
-            <li className=" cursor-pointer">Contact Us</li>
+            {navItems.map((item, index) => (
+              <li className=" cursor-pointer">
+                <Link to={item.link}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="">
-          <h2 className="font-bold ml-7 text-2xl">Institute Hours</h2>
-          <p className="mt-2 ml-10 ">Monday To Friday</p>
-          <p className="ml-10 ">09.00 AM - 5.00 PM</p>
-          <p className="mt-4 ml-10 ">Saturday & Sunday</p>
-          <p className=" ml-10 ">No Admission/Enquiry</p>
+          <h2 className="font-bold text-2xl">Institute Hours</h2>
+          {InstTiming.map((inst, index) => (
+            <p className="">{inst}</p>
+          ))}
         </div>
         <div className="">
           <div className="">
@@ -75,22 +65,15 @@ const Footer = () => {
           2019 © Veerbhadreshwar Pharmacy College All Right Reserved.
         </h1>
         <div className="text-white flex items-center ">
-          <p className="text-xl">
-            Social :
-          </p>
+          <p className="text-xl">Social :</p>
           <ul className="flex  ml-5 text-2xl">
-            <li className="p-2 hover:bg-gray-300 cursor-pointer">
-              <FontAwesomeIcon icon={faFacebook} />
-            </li>
-            <li className="p-2 hover:bg-gray-300 cursor-pointer">
-              <FontAwesomeIcon icon={faInstagram} />
-            </li>
-            <li className="p-2 hover:bg-gray-300 cursor-pointer">
-              <FontAwesomeIcon icon={faXTwitter} />
-            </li>
-            <li className="p-2 hover:bg-gray-300 cursor-pointer">
-              <FontAwesomeIcon icon={faGoogle} />
-            </li>
+            {faIcon.map((faicon) => (
+              <li className="p-2 cursor-pointer">
+                <Link to="/">
+                  <FontAwesomeIcon icon={faicon} />
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>{" "}
         */

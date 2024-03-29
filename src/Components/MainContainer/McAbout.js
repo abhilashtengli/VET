@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../Images/VET_logo.png";
+import logo from "../../Images/VET_logo.png";
 const McAbout = () => {
   return (
     <>
-      <div className=" bg-gray-200 p-5">
+      <div className=" bg-gray-200 p-5 py-20">
         <h1 className=" text-3xl  pl-36 py-2 ml-10 font-semibold">ABOUT US</h1>
         <div className=" flex justify-center items-center ">
           <div className=" w-2/4 p-5 mx-5">
