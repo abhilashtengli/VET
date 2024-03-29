@@ -4,6 +4,7 @@ import {
   faInstagram,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import ph_student from "../Images/ph_students.jpg";
 export const facility = [
   "CLASSROOMS",
   "LIBRARY",
@@ -26,8 +27,18 @@ export const navItems = [
 export const faIcon = [faFacebook, faInstagram, faXTwitter, faGoogle];
 
 export const InstTiming = [
-    "Monday To Friday",
-    "09.00 AM - 5.00 PM",
-    "Saturday & Sunday",
-    "No Admission/Enquiry",
-  ];
+  "Monday To Friday",
+  "09.00 AM - 5.00 PM",
+  "Saturday & Sunday",
+  "No Admission/Enquiry",
+];
+
+export const images = [
+  ph_student,
+  ph_student,
+  ph_student,
+  ph_student,
+  ph_student,
+  ph_student,
+  ph_student,
+];

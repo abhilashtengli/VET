@@ -10,7 +10,7 @@ import Footer from "../Footer";
 const MainContainer = () => {
   return (
     <>
-      <div className="flex">
+      <div className="flex justify-between">
         <CollegeName />
         <CollegeImages />
       </div>

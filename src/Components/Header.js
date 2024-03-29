@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="z-10 shadow-lg fixed w-screen bg-white  bg-opacity-75 backdrop-blur-sm	 flex justify-between items-center  py-2 ">
+      <div className="z-10 shadow-lg sticky top-0 w-screen bg-white  bg-opacity-75 backdrop-blur-sm	flex justify-between items-center py-2 ">
         <img
           className="w-20 rounded-full ml-20"
           alt="vet_logo"

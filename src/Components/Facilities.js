@@ -7,7 +7,7 @@ const Facilities = () => {
   return (
     <div>
       <Header />
-      <div className="py-20">
+      <div className="">
         <h1 className="text-3xl text-center font-semibold py-5">FACILITIES</h1>
         <div className="w-full flex flex-wrap justify-center">
           {facility.map((f) => (

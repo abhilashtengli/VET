@@ -7,7 +7,7 @@ const Courses = () => {
   return (
     <div className="">
       <Header />
-      <div className="pt-20">
+      <div className="">
         <McCourse />
       </div>
       <Footer />

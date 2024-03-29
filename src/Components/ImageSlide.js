@@ -1,0 +1,33 @@
+import React, { useState, useEffect } from "react";
+
+const ImageSlider = ({ images, interval }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, interval);
+
+    return () => clearInterval(intervalId);
+  }, [images.length, interval]);
+
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className="flex transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Image ${index + 1}`}
+            className="w-full"
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;
