@@ -1,12 +1,28 @@
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import Header from "./Header";
 import Footer from "./Footer";
 
 const Contact = () => {
+  const validationSchema = Yup.object().shape({
+    userName: Yup.string().min(3).required("Name is required"),
+    userEmail: Yup.string()
+      .email("Invalid email")
+      .matches(/\.(com|in)$/, "Email must contain '.com' or '.in'")
+      .required("Email is required"),
+    message: Yup.string().min(10).required("Message is required"),
+  });
+  
+
+  const handleSubmit = (values, { resetForm }) => {
+    alert("messeagesend");
+    resetForm();
+  };
   return (
     <div>
       <Header />
-      <div className="flex justify-end items-center mb-20 border border-red-600">
+      <div className="flex justify-end  items-center mb-20 border border-red-600">
         <div className="w-1/3 mt-32  mr-20 border p-5 rounded-lg border-black">
           <form className="h-2/3">
             <label className="mt-4 font-semibold">Name</label>
