@@ -1,6 +1,6 @@
 import React from "react";
-import pci_logo from "../Images/pci_logo.png";
-import rguhs_logo from "../Images/rguhs_logo.png";
+import pci_logo from "../../Images/pci_logo.png"
+import rguhs_logo from "../../Images/rguhs_logo.png";
 const McApproval = () => {
   return (
     <>

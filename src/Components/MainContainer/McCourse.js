@@ -1,6 +1,6 @@
 import React from "react";
-import ph_student from "../Images/ph_students.jpg";
-import ph_mcStudent from "../Images/st_img.jpg";
+import ph_student from "../../Images/ph_students.jpg";
+import ph_mcStudent from "../../Images/st_img.jpg";
 const McCourse = () => {
   return (
     <>
@@ -20,8 +20,8 @@ const McCourse = () => {
               alt=""
               src={ph_mcStudent}
             />
-            <p className="text-black z-10 w-72 rounded-bl-lg -mt-5 ml-[9rem] font-semibold text-2xl absolute   transform -translate-x-1/2 -translate-y-1/2 py-1 px-2 bg-white ">
-              Diploma in pharmacy
+            <p className="text-black  w-full rounded-bl-lg -mt-5 ml-[12rem] font-semibold text-2xl absolute   transform -translate-x-1/2 -translate-y-1/2 py-1 px-2 bg-white ">
+              Diploma in pharmacy (2 years)
             </p>
           </div>
         </div>
