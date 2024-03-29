@@ -8,7 +8,6 @@ import {
 import {
   faEnvelope,
   faHome,
-  faMailBulk,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
