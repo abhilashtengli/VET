@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { faIcon } from "../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import Address from "./Address";
 const Contact = () => {
   const validationSchema = Yup.object().shape({
     userName: Yup.string().min(3).required("Name is required"),
@@ -23,6 +24,9 @@ const Contact = () => {
   return (
     <div>
       <Header />
+      <div className="flex w-full py-5 justify-center">
+        <Address />
+      </div>
       <div className=""></div>
       <div className=" p-5 flex justify-evenly ">
         <div className=" bg-gray-200  p-5">
@@ -66,8 +70,8 @@ const Contact = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          <Form className="border bg-gray-200  py-10 w-96 p-5 rounded-lg">
-            <label htmlFor="userName" className="mb-5 font-semibold">
+          <form className="border bg-gray-200  py-10 w-96 p-5 rounded-lg">
+            <label htmlFor="userName" className="mb-5 ml-2 font-semibold">
               Name
             </label>
             <Field
@@ -82,7 +86,7 @@ const Contact = () => {
               className="text-red-500 py-2"
             />
 
-            <label htmlFor="userEmail" className="mt-4 font-semibold py-2">
+            <label htmlFor="userEmail" className="mt-4 ml-2 font-semibold py-2">
               Email
             </label>
             <Field
@@ -97,14 +101,14 @@ const Contact = () => {
               className="text-red-500"
             />
 
-            <label htmlFor="message" className="mt-4 font-semibold">
+            <label htmlFor="message" className="mt-4 ml-2 font-semibold">
               Message
             </label>
             <Field
               as="textarea"
               name="message"
               id="message"
-              className="w-full p-1 outline-none rounded-md border border-gray-300 focus:border-teal-500"
+              className="w-full p-1 mt-2 outline-none rounded-md border border-gray-300 focus:border-teal-500"
             />
             <ErrorMessage
               name="message"
@@ -118,7 +122,7 @@ const Contact = () => {
             >
               Send
             </button>
-          </Form>
+          </form>
         </Formik>
       </div>
 

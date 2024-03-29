@@ -1,11 +1,26 @@
 import React from "react";
 import logo from "../../Images/VET_logo.png";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { images } from "../../Utils/Constants";
+import ImageSlider from "../ImageSlider";
+
 const McAbout = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navigateToAboutPage = () => {
+    navigate("/aboutus");
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const showButton = location.pathname !== "/aboutus";
+
   return (
     <>
-      <div className=" bg-gray-200 p-5 py-20">
-        <h1 className=" text-3xl  pl-36 py-2 ml-10 font-semibold">ABOUT US</h1>
-        <div className=" flex justify-center items-center ">
+      <div className=" bg-gray-200 p-5  py-20">
+        <h1 className=" text-3xl  pl-32 ml-1 py-2 font-semibold">ABOUT US</h1>
+        <div className=" flex justify-evenly items-center ">
           <div className=" w-2/4 p-5 mx-5">
             <p className=" py-2">
               Veerbhadreshwar College of Pharmacy is managed by Veerbhadreshwar
@@ -17,7 +32,7 @@ const McAbout = () => {
               the year 2019.
             </p>
             <p className="py-2">
-              Pharmacy profession is a creative and challenging career. By
+              yy Pharmacy profession is a creative and challenging career. By
               choosing pharmacy as career, you can make all endeavours to create
               a healthy society. Numerous job opportunities are available in
               Community Pharmacy, Hospital Pharmacy, Clinical Services,
@@ -25,16 +40,22 @@ const McAbout = () => {
               Industry, Pharmaceutical - Regulatory Affairs, Pharmacoinformatics
               and Academics.
             </p>
-            <button className=" border border-black font-semibold  mt-2 bg-white hover:bg-black hover:text-white px-3 py-1 rounded-lg">
-              Know more
-            </button>
+            {showButton && (
+              <button
+                onClick={navigateToAboutPage}
+                className="mt-2 border border-black hover:border-none font-semibold bg-white hover:bg-yellow-500 hover:text-white px-3 py-1 rounded-lg"
+              >
+                Know more
+              </button>
+            )}
           </div>
-          <div>
+          <div className="">
             <img
-              className=" w-96 rounded-lg shadow-black mx-5"
+              className="w-96 rounded-lg shadow-black mx-5"
               alt=""
               src={logo}
             />
+            {/* <ImageSlider images={images} interval={2000}/> */}
           </div>
         </div>
       </div>

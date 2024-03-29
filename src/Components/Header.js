@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="z-10 shadow-lg sticky top-0 w-screen bg-white  bg-opacity-75 backdrop-blur-sm	flex justify-between items-center py-2 ">
-        <img
+      <div className="z-10 shadow-lg sticky w- top-0 w-full bg-white  bg-opacity-75 backdrop-blur-sm	flex justify-between items-center py-2 ">
+        <Link to="/"><img
           className="w-20 rounded-full ml-20"
           alt="vet_logo"
           src={logo}
-        ></img>
+        /></Link>
         <div className="flex mr-32">
           <ul className="flex  mr-20 hover:cursor-pointer">
             <li className="text-lg px-5 py-1 cursor-pointer hover:text-green-600  font-semibold">
@@ -34,7 +34,7 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <p className="border border-gray-400 cursor-pointer text-lg py-1 rounded-lg px-3 font-semibold hover:bg-black hover:text-white hover:cursor-pointer">
+          <p className="border border-gray-400 cursor-pointer text-lg py-1 rounded-lg px-3 font-semibold hover:bg-yellow-500 hover:text-white hover:cursor-pointer">
             <Link to="/admission">ADMISSION</Link>
           </p>
         </div>
