@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -7,15 +7,11 @@ import { faIcon } from "../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Address from "./Address";
+import useLoading from "./Hooks/useLoading";
+import useValidationSchema from "./Hooks/useValidationSchema";
+
 const Contact = () => {
-  const validationSchema = Yup.object().shape({
-    userName: Yup.string().min(3).required("Name is required"),
-    userEmail: Yup.string()
-      .email("Invalid email")
-      .matches(/\.(com|in)$/, "Email must contain '.com' or '.in'")
-      .required("Email is required"),
-    message: Yup.string().min(10).required("Message is required"),
-  });
+  const validationSchema = useValidationSchema();
 
   const handleSubmit = (values, { resetForm }) => {
     alert("messeagesend");
@@ -29,7 +25,7 @@ const Contact = () => {
       </div>
       <div className=""></div>
       <div className=" p-5 flex justify-evenly ">
-        <div className=" bg-gray-200  p-5">
+        <div className=" bg-gray-200 rounded-lg p-5">
           <div className="border bg-white my-5 rounded-lg p-2">
             <h1 className="text-2xl">Contact Details</h1>
             <p className="text-gray-600">
@@ -40,12 +36,15 @@ const Contact = () => {
             <h1 className="text-2xl">Get in touch</h1>
             <p className="text-gray-600">
               <span className="font-semibold mr-2">Office :</span> 08472 -
+              234758
             </p>
             <p className="text-gray-600">
               <span className="font-semibold mr-2">Fax : </span>123-323-3343
             </p>
             <p className="text-gray-600">
-              <span className="font-semibold mr-2">Phone :</span>
+              <span className="font-semibold mr-2">
+                Phone : 9916334758, 9742847301
+              </span>
             </p>
             <p className="text-gray-600">
               <span className="font-semibold mr-2">Email :</span>

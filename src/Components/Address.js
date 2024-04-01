@@ -9,8 +9,9 @@ const Address = () => {
         height="500"
         allowFullScreen
         loading="lazy"
+        title="googleMap"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-2xl border border-yellow-300 border-8"
+        className="rounded-2xl  border-yellow-300 border-8"
       ></iframe>
     </div>
   );

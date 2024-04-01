@@ -1,15 +1,26 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { images } from "../../src/Utils/Constants";
 import ImageScroller from "./ImageScroller";
+import useLoading from "./Hooks/useLoading";
+import HomeShimmer from "./Shimmer/HomeShimmer";
+import McCourse from "./MainContainer/McCourse";
+
 const Faculties = () => {
+  const isLoading = useLoading(true,300);
   return (
-    <div>
-      <Header />
-      <ImageScroller />
-      <Footer />
-    </div>
+    <>
+      {isLoading ? (
+        <HomeShimmer />
+      ) : (
+        <div>
+          <Header />
+          <ImageScroller />
+          <McCourse />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

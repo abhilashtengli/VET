@@ -1,6 +1,6 @@
 import React from "react";
-import pci_logo from "../../Images/pci_logo.png"
-import rguhs_logo from "../../Images/rguhs_logo.png";
+import pci_logo from "../../Images/pci_logo.png";
+import bead_logo from "../../Images/bead_logo.png";
 const McApproval = () => {
   return (
     <>
@@ -20,13 +20,9 @@ const McApproval = () => {
             </h2>
           </div>
           <div className="bg-white m-5 rounded-3xl shadow-lg ">
-            <img
-              className="w-64 m-5 border-black p-10"
-              alt=""
-              src={rguhs_logo}
-            />
+            <img className="w-64 m-5 h-64" alt="" src={bead_logo} />
             <h2 className="text-center font-semibold text-2xl -mt-10 pb-5">
-              RGUHS
+              BEAD
             </h2>
           </div>
         </div>

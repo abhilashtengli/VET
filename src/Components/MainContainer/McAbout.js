@@ -2,8 +2,6 @@ import React from "react";
 import logo from "../../Images/VET_logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { images } from "../../Utils/Constants";
-import ImageSlider from "../ImageSlider";
 
 const McAbout = () => {
   const navigate = useNavigate();
@@ -19,7 +17,9 @@ const McAbout = () => {
   return (
     <>
       <div className=" bg-gray-200 p-5  py-20">
-        <h1 className=" text-3xl  pl-32 ml-1 py-2 font-semibold">ABOUT US</h1>
+        <h1 className=" text-3xl  pl-32 ml-4 w-2/5 py-2 font-semibold">
+          ABOUT US
+        </h1>
         <div className=" flex justify-evenly items-center ">
           <div className=" w-2/4 p-5 mx-5">
             <p className=" py-2">
@@ -32,7 +32,7 @@ const McAbout = () => {
               the year 2019.
             </p>
             <p className="py-2">
-              yy Pharmacy profession is a creative and challenging career. By
+              Pharmacy profession is a creative and challenging career. By
               choosing pharmacy as career, you can make all endeavours to create
               a healthy society. Numerous job opportunities are available in
               Community Pharmacy, Hospital Pharmacy, Clinical Services,
@@ -49,12 +49,8 @@ const McAbout = () => {
               </button>
             )}
           </div>
-          <div className="">
-            <img
-              className="w-96 rounded-lg shadow-black mx-5"
-              alt=""
-              src={logo}
-            />
+          <div className="-mt-16">
+            <img className="w-96 rounded-lg shadow-black " alt="" src={logo} />
             {/* <ImageSlider images={images} interval={2000}/> */}
           </div>
         </div>
