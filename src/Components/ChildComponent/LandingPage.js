@@ -2,6 +2,7 @@ import Header from "../Header";
 import MainContainer from "../MainContainer/MainContainer";
 import HomeShimmer from "../Shimmer/HomeShimmer";
 import useLoading from "../Hooks/useLoading";
+import Latest from "../Latest/Latest";
 
 const LandinPage = () => {
   const isLoading = useLoading(true, 300);
@@ -13,6 +14,7 @@ const LandinPage = () => {
       ) : (
         <>
           <Header />
+          <Latest/>
           <MainContainer />
         </>
       )}

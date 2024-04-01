@@ -5,7 +5,7 @@ import BankDetailsAccordian from "./Accordians/BankDetailsAccordian";
 const Header = () => {
   return (
     <>
-      <div className="z-10 shadow-lg sticky w- top-0 w-full bg-green-100  bg-opacity-75 backdrop-blur-sm	flex justify-between items-center py-2 ">
+      <div className="z-10 shadow-lg sticky top-0 w-full bg-green-100  bg-opacity-75 backdrop-blur-sm	flex justify-between items-center py-2 ">
         <Link to="/">
           <img className="w-16 rounded-full ml-20" alt="vet_logo" src={logo} />
         </Link>
