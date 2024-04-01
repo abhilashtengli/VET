@@ -34,17 +34,17 @@ const CollegeName = () => {
 
             <ul className="pl-2 mt-2">
               <li className="flex">
-                <icon className="pr-1">➡️</icon>
+                <p className="pr-1">➡️</p>
                 To cultivate proficient pharmacists equipped with
                 entrepreneurial and innovative abilities.
               </li>
               <li className="flex">
-                <icon className="pr-1">➡️</icon>
+                <p className="pr-1">➡️</p>
                 To provide education on drugs, pharmaceutical products, health,
                 and population management
               </li>
               <li className="flex">
-                <icon className="pr-1">➡️</icon>
+                <p className="pr-1">➡️</p>
                 To establish a model pharmacy within the institution to enhance
                 the connection between the public and the field of pharmacy.
               </li>
