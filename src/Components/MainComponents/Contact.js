@@ -1,14 +1,14 @@
 import React from "react";
 import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Header from "./Header";
-import Footer from "./Footer";
-import { faIcon } from "../Utils/Constants";
+import Header from "../Header";
+import Footer from "../Footer";
+import { faIcon } from "../../Utils/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import Address from "./Address";
-import useLoading from "./Hooks/useLoading";
-import useValidationSchema from "./Hooks/useValidationSchema";
+import Address from "../ChildComponent/Address";
+import useLoading from "../Hooks/useLoading";
+import useValidationSchema from "../Hooks/useValidationSchema";
 
 const Contact = () => {
   const validationSchema = useValidationSchema();

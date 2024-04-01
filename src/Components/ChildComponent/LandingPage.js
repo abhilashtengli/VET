@@ -1,7 +1,7 @@
-import Header from "./Header";
-import MainContainer from "./MainContainer/MainContainer";
-import HomeShimmer from "./Shimmer/HomeShimmer";
-import useLoading from "./Hooks/useLoading";
+import Header from "../Header";
+import MainContainer from "../MainContainer/MainContainer";
+import HomeShimmer from "../Shimmer/HomeShimmer";
+import useLoading from "../Hooks/useLoading";
 
 const LandinPage = () => {
   const isLoading = useLoading(true, 300);

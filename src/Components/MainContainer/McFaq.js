@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../../Utils/Accordian";
+import Accordion from "../Accordians/Accordian";
 const McFaq = () => {
   return (
     <>

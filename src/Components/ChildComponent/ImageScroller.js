@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { images } from "../Utils/Constants";
 
 // npm install react-slick slick-carousel
 
-const ImageScroller = () => {
+const ImageScroller = ({ images }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {
@@ -74,7 +73,7 @@ const ImageScroller = () => {
           <Slider {...settings} className={isHovering ? "paused" : ""}>
             {images.map((image, index) => (
               <div className="px-5 py-2 h-72  border-black" key={index}>
-                <div className="p-2 rounded-lg bg-gray-200">
+                <div className="p-2 rounded-lg bg-gray-200 hover:scale-110 duration-500">
                   <img
                     className="cursor-pointer w-96 "
                     src={image.img}

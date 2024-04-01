@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-import QR from "../Images/VET_logo1.png";
+import React, { useState, useEffect, useRef } from "react";
+import QR from "../../Images/VET_logo1.png";
+
 const BankDetailsAccordian = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+  }, [isOpen]);
 
   return (
     <div className="">
@@ -13,12 +27,14 @@ const BankDetailsAccordian = () => {
         onClick={toggleAccordion}
         className="border border-gray-400 cursor-pointer text-lg py-1 rounded-lg px-3 font-semibold hover:border-yellow-500 hover:bg-yellow-500 hover:text-white hover:cursor-pointer"
       >
-        {/* {isOpen ? "Hide Details" : "Show Details"} */}
         Pay now
       </button>
 
       {isOpen && (
-        <div className="mt-4 p-3 flex w-[30%] -ml-72 justify-center items-center bg-white rounded-lg absolute">
+        <div
+          className="mt-4 p-3 flex w-[30%] -ml-72 justify-center items-center bg-white rounded-lg absolute"
+          ref={modalRef}
+        >
           <div className="w-[60%] mr-2">
             <p className="text-black text-sm my-1">
               <span className="font-bold">Bank :</span> HDFC Bank Ltd
@@ -41,7 +57,6 @@ const BankDetailsAccordian = () => {
               <span className="font-bold">Account Type :</span> CURRENT
             </p>
           </div>
-
           <div className="w-[40%] ml-2 ">
             <img className="" alt="" src={QR} />
           </div>

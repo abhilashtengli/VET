@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import ph_student from "../Images/ph_students.jpg";
-import { facility } from "../Utils/Constants";
-import useLoading from "./Hooks/useLoading";
-import HomeShimmer from "./Shimmer/HomeShimmer";
-import PhotoGallery from "./PhotoGallery";
+import Header from "../Header";
+import Footer from "../Footer";
+import ph_student from "../../Images/ph_students.jpg";
+import { facility } from "../../Utils/Constants";
+import useLoading from "../Hooks/useLoading";
+import HomeShimmer from "../Shimmer/HomeShimmer";
+import PhotoGallery from "../ChildComponent/PhotoGallery";
 
 const Facilities = () => {
   const isLoading = useLoading(true, 300);

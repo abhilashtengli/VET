@@ -1,5 +1,5 @@
 import React from "react";
-import ImageSlider from "../ImageSlider";
+import ImageSlider from "../ChildComponent/ImageSlider";
 import { image } from "../../Utils/Constants";
 
 const CollegeImages = () => {

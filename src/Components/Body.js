@@ -1,13 +1,13 @@
 import React from "react";
-import LandingPage from "./LandingPage";
+import LandingPage from "./ChildComponent/LandingPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AboutUs from "./AboutUs";
-import Contact from "./Contact";
-import Courses from "./Courses";
-import Facilities from "./Facilities";
-import Faculties from "./Faculties";
-import Gallery from "./Gallery";
-import Admission from "./Admission";
+import AboutUs from "../Components/MainComponents/AboutUs";
+import Contact from "../Components/MainComponents/Contact";
+import Courses from "../Components/MainComponents/Courses";
+import Facilities from "../Components/MainComponents/Facilities";
+import Faculties from "../Components/MainComponents/Faculties";
+import Gallery from "../Components/MainComponents/Gallery";
+import Admission from "../Components/MainComponents/Admission";
 const Body = () => {
   const appRouter = createBrowserRouter([
     {

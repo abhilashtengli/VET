@@ -16,7 +16,7 @@ const McCourse = () => {
         <div className=" border-red-500 flex justify-center mt-10  ">
           <div className="relative">
             <img
-              className="w-96 rounded-lg ransform transition-all duration-300 hover:scale-110"
+              className="w-96 rounded-lg  hover:scale-110 duration-500"
               alt=""
               src={ph_mcStudent}
             />

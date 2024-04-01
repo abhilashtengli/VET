@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import useLoading from "./Hooks/useLoading";
-import HomeShimmer from "./Shimmer/HomeShimmer";
-import Footer from "./Footer";
+import Header from "../Header";
+import useLoading from "../Hooks/useLoading";
+import HomeShimmer from "../Shimmer/HomeShimmer";
+import Footer from "../Footer";
 
 const Admission = () => {
   const isLoading = useLoading(true, 300);

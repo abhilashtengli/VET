@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header";
-import McCourse from "./MainContainer/McCourse";
-import Footer from "./Footer";
-import useLoading from "./Hooks/useLoading";
-import HomeShimmer from "./Shimmer/HomeShimmer";
+import Header from "../Header";
+import McCourse from "../MainContainer/McCourse";
+import Footer from "../Footer";
+import useLoading from "../Hooks/useLoading";
+import HomeShimmer from "../Shimmer/HomeShimmer";
 
 const Courses = () => {
   const isLoading = useLoading(true, 300);

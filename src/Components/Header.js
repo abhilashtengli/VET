@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../Images/VET_logo1.png";
 import { Link } from "react-router-dom";
-import BankDetailsAccordian from "./BankDetailsAccordian";
+import BankDetailsAccordian from "./Accordians/BankDetailsAccordian";
 const Header = () => {
   return (
     <>

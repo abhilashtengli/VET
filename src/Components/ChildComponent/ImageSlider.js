@@ -12,7 +12,7 @@ const ImageSlider = ({ images, interval }) => {
   }, [images.length, interval]);
 
   return (
-    <div className="relative overflow-hidden  h-[34rem]">
+    <div className="relative overflow-hidden  h-[32rem]">
       <div
         className="flex transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
