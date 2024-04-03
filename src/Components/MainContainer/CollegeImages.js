@@ -4,8 +4,8 @@ import { image } from "../../Utils/Constants";
 
 const CollegeImages = () => {
   return (
-    <div className="w-full md:w-[60%] px-5  md:p-5">
-      <div className="w-full p-2 border md:p-2 bg-gray-200 rounded-lg">
+    <div className="w-screen md:w-[60%] px-5 md:p-5">
+      <div className="w-full p-2  md:p-2  bg-gray-200 rounded-lg">
         <ImageSlider images={image} interval={2000} />
       </div>
     </div>

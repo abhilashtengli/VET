@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="z-10 sticky top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 w-full bg-opacity-75 backdrop-blur-sm items-center md:py-2">
+      <div className="z-10 sticky w-full top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 bg-opacity-75 backdrop-blur-sm items-center md:py-2">
         <Link to="/">
           <img
             className="w-16 rounded-full ml-2 md:ml-20"

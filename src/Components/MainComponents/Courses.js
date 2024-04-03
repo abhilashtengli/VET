@@ -17,7 +17,7 @@ const Courses = () => {
           <div className="">
             <McCourse />
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       )}
     </>

@@ -67,15 +67,15 @@ const ImageScroller = ({ images }) => {
 
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="md:mx-auto md:max-w-7xl md:px-4 mx-5 p-2 md:p-0 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-semibold text-center py-5">Faculties</h1>
         <div className="mb-16 mt-8">
           <Slider {...settings} className={isHovering ? "paused" : ""}>
             {images.map((image, index) => (
-              <div className="px-5 py-2 h-72  border-black" key={index}>
+              <div className="px-5 py-2 md:h-72  border-black" key={index}>
                 <div className="p-2 rounded-lg bg-gray-200 hover:scale-110 duration-500">
                   <img
-                    className="cursor-pointer w-96 "
+                    className="cursor-pointer md:w-96 "
                     src={image.img}
                     alt={`Faculty ${index + 1}`}
                   />

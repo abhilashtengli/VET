@@ -29,12 +29,13 @@ export const facility = [
 
 export const navItems = [
   { label: "Home", link: "/" },
-  { label: "About Us", link: "/aboutus" },
   { label: "Courses", link: "/courses" },
-  { label: "Admission", link: "/admission" },
-  { label: "News & Events", link: "/news-events" },
   { label: "Facilities", link: "/facilities" },
+  { label: "Faculties", link: "/faculties" },
+  { label: "Gallery", link: "/gallery" },
+  { label: "About Us", link: "/aboutus" },
   { label: "Contact Us", link: "/contact" },
+  { label: "Admission", link: "/admission" },
 ];
 
 export const faIcon = [faFacebook, faInstagram, faXTwitter, faGoogle];

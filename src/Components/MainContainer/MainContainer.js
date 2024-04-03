@@ -20,7 +20,7 @@ const MainContainer = () => {
       <McApproval />
       <McCourse />
       <McFaq />
-      {/* <Footer/> */}
+      <Footer />
     </>
   );
 };
