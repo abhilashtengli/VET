@@ -7,7 +7,7 @@ const McFaq = () => {
         FAQ's
       </h1>
       <div className="w-full flex justify-center bg-gray-100 py-5 ">
-        <div className="p-4 rounded-lg w-2/3">
+        <div className="p-4 rounded-lg md:w-2/3">
           <Accordion
             title="What is Pharmacy Practise?"
             answer="The application of unique knowledge and skills of the pharmacist to improve the health of the people is called Pharmacy Practice. It includes hospital, clinical, and community pharmacy."

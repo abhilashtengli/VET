@@ -17,11 +17,11 @@ const McAbout = () => {
   return (
     <>
       <div className=" bg-gray-200 p-5  py-20">
-        <h1 className=" text-3xl  pl-32 ml-4 w-2/5 py-2 font-semibold">
+        <h1 className=" text-3xl pl-6  md:text-start md:pl-32 ml-4  md:w-2/5 py-2 font-semibold">
           ABOUT US
         </h1>
-        <div className=" flex justify-evenly items-center ">
-          <div className=" w-2/4 p-5 mx-5">
+        <div className=" md:flex justify-evenly items-center ">
+          <div className=" md:w-2/4 p-5 mx-5">
             <p className=" py-2">
               Veerbhadreshwar College of Pharmacy is managed by Veerbhadreshwar
               Education Trust. The Trust is established in the year 2017 to
@@ -49,8 +49,13 @@ const McAbout = () => {
               </button>
             )}
           </div>
-          <div className="-mt-16">
-            <img className="w-96 rounded-lg shadow-black " alt="" src={logo} />
+
+          <div className="flex justify-center md:-mt-16">
+            <img
+              className="w-72 md:w-96 rounded-lg shadow-black "
+              alt=""
+              src={logo}
+            />
             {/* <ImageSlider images={images} interval={2000}/> */}
           </div>
         </div>

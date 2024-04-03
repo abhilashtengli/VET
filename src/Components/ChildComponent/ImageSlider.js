@@ -12,13 +12,13 @@ const ImageSlider = ({ images, interval }) => {
   }, [images.length, interval]);
 
   return (
-    <div className="relative overflow-hidden  h-[32rem]">
+    <div className="relative overflow-hidden  md:h-[32rem]">
       <div
-        className="flex transition-transform duration-1000 ease-in-out"
+        className="flex transition-transform duration-1000 border border-blue-600 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <img key={index} src={image} alt="" className="w-full h-auto" />
+          <img key={index} src={image} alt="" className="w-full" />
         ))}
       </div>
     </div>

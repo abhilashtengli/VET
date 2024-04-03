@@ -32,7 +32,7 @@ const BankDetailsAccordian = () => {
 
       {isOpen && (
         <div
-          className="mt-4 p-3 flex w-[30%] -ml-72 justify-center items-center bg-white rounded-lg absolute"
+          className="md:mt-4 p-3 w-full mt-1 border-2 border-gray-300 shadow-lg flex md:w-[40%] md:-ml-44 justify-center items-center bg-white rounded-lg absolute"
           ref={modalRef}
         >
           <div className="w-[60%] mr-2">

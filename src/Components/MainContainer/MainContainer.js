@@ -1,18 +1,20 @@
 import React from "react";
-import CollegeName from "./CollegeName";
 import CollegeImages from "./CollegeImages";
 import McAbout from "./McAbout";
 import McApproval from "./McApproval";
 import McCourse from "./McCourse";
 import McFaq from "./McFaq";
 import Footer from "../Footer";
+import CollegeName from "./CollegeName";
+import CollegeVision from "./CollegeVision";
 
 const MainContainer = () => {
   return (
     <>
-      <div className="flex justify-between">
-        <CollegeName />
-        {/* <CollegeImages /> */}
+      <CollegeName />
+      <div className="flex-col-reverse md:flex-row flex md:justify-between">
+        <CollegeVision />
+        <CollegeImages />
       </div>
       <McAbout />
       <McApproval />
