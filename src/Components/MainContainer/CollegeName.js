@@ -4,7 +4,7 @@ const CollegeName = () => {
   return (
     <>
       <div className=" border border-blue-500 w-full md:w-[40%] ">
-        <h1 className="mt-30  font-bold border border-red-600 md:text-4xl text-center pl-6 px-3 py-5 text-gray-800 ">
+        <h1 className="mt-30  font-bold border border-red-600 md:text-4xl text-center md:pl-6 px-3 py-5 text-gray-800 ">
           VEERBHADRESHWAR COLLEGE OF PHARMACY
         </h1>
         <div className=" px-5">
