@@ -12,13 +12,13 @@ const MainContainer = () => {
     <>
       <div className="flex justify-between">
         <CollegeName />
-        <CollegeImages />
+        {/* <CollegeImages /> */}
       </div>
       <McAbout />
       <McApproval />
       <McCourse />
       <McFaq />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 };

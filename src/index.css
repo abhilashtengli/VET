@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 
-.scrolling-text-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.scrolling-text {
-    white-space: nowrap;
-    animation: scroll-left 15s linear infinite;
-}
-
-@keyframes scroll-left {
-    0% {
+@keyframes scroll {
+    from {
         transform: translateX(100%);
     }
 
-    100% {
-        transform: translateX(-100%);
+    to {
+        transform: translateX(-10%);
     }
+}
+
+.scrolling-text-container {
+    white-space: nowrap;
+    animation: scroll 5s linear infinite;
+
+}
+
+.scrolling-text-container:hover {
+    animation-play-state: paused;
 }

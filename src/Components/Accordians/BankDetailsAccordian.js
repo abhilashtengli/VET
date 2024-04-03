@@ -25,7 +25,7 @@ const BankDetailsAccordian = () => {
     <div className="">
       <button
         onClick={toggleAccordion}
-        className="border border-gray-400 cursor-pointer text-lg py-1 rounded-lg px-3 font-semibold hover:border-yellow-500 hover:bg-yellow-500 hover:text-white hover:cursor-pointer"
+        className="border border-gray-400 cursor-pointer ml-5 md:ml-0 md:w-full mt-5 md:mt-0 w-[90%] text-lg py-1 rounded-lg px-3 font-semibold hover:border-yellow-500 hover:bg-yellow-500 hover:text-white hover:cursor-pointer"
       >
         Pay now
       </button>

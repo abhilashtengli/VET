@@ -14,7 +14,7 @@ const LandinPage = () => {
       ) : (
         <>
           <Header />
-          <Latest/>
+          {/* <Latest/> */}
           <MainContainer />
         </>
       )}
