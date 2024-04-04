@@ -6,6 +6,7 @@ import useLoading from "../Hooks/useLoading";
 import HomeShimmer from "../Shimmer/HomeShimmer";
 import McCourse from "../MainContainer/McCourse";
 import { images } from "../../Utils/Constants";
+import ScrollToTopButton from "../ScrollToTopButton";
 
 const Faculties = () => {
   const isLoading = useLoading(true, 300);
@@ -19,6 +20,7 @@ const Faculties = () => {
           <ImageScroller images={images}/>
           <McCourse />
           <Footer />
+          <ScrollToTopButton/>
         </div>
       )}
     </>

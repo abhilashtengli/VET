@@ -1,18 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../Images/VET_logo1.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import BankDetailsAccordian from "./Accordians/BankDetailsAccordian";
-
+import closeMenuIcon from "../Images/close_icon.png";
+import hamburgerMenu from "../Images/Hamburger_icon.png";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const location = useLocation();
+  const modalRef = useRef(null);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    if (showMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+  }, [showMenu]);
+
+  const handleClick = () => {
+    if (showMenu) {
+      setShowMenu(false);
+    }
+    if (location.pathname === "/") {
+      window.scroll(0, 0);
+    }
+  };
+
   return (
     <>
-      <div className="z-10 sticky w-full top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 bg-opacity-75 backdrop-blur-sm items-center md:py-2">
+      <div
+        ref={modalRef}
+        className="z-10 sticky w-full top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 bg-opacity-75 backdrop-blur-sm items-center md:py-2"
+      >
         <Link to="/">
           <img
             className="w-16 rounded-full ml-2 md:ml-20"
@@ -20,24 +47,21 @@ const Header = () => {
             src={logo}
           />
         </Link>
-        <div className="flex md:mr-24">
+
+        <div className="flex  md:mr-24">
           {/* Hamburger Menu for mobile */}
           <div className="mr-5 block md:hidden">
             <button
               className="text-gray-800 focus:outline-none"
               onClick={toggleMenu}
             >
-              <svg
-                className="w-8 h-8 fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"
-                />
-              </svg>
+              {showMenu ? (
+                // Cross Icon
+                <img className="w-4" alt="close_menu" src={closeMenuIcon} />
+              ) : (
+                // Hamburger Icon
+                <img className="w-5" alt="" src={hamburgerMenu} />
+              )}
             </button>
           </div>
           {/* Menu Items */}
@@ -47,28 +71,44 @@ const Header = () => {
             } md:mr-16`}
           >
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleClick}>
+                Home
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/courses">Courses</Link>
+              <Link to="/courses" onClick={handleClick}>
+                Courses
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/facilities">Facilities</Link>
+              <Link to="/facilities" onClick={handleClick}>
+                Facilities
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/faculties">Faculties</Link>
+              <Link to="/faculties" onClick={handleClick}>
+                Faculties
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/gallery">Gallery</Link>
+              <Link to="/gallery" onClick={handleClick}>
+                Gallery
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus" onClick={handleClick}>
+                About Us
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={handleClick}>
+                Contact
+              </Link>
             </li>
             <li className="border border-b-2 md:border-none text-lg px-5 py-1 cursor-pointer hover:text-green-600 font-semibold">
-              <Link to="/admission">ADMISSION</Link>
+              <Link to="/admission" onClick={handleClick}>
+                ADMISSION
+              </Link>
             </li>
             <li lassName="text-lg px-5 py-1 cursor-pointer font-semibold">
               <BankDetailsAccordian />

@@ -3,6 +3,7 @@ import Header from "../Header";
 import useLoading from "../Hooks/useLoading";
 import HomeShimmer from "../Shimmer/HomeShimmer";
 import Footer from "../Footer";
+import ScrollToTopButton from "../ScrollToTopButton";
 
 const Admission = () => {
   const isLoading = useLoading(true, 300);
@@ -44,6 +45,7 @@ const Admission = () => {
             </div>
           </div>
           <Footer />
+          <ScrollToTopButton/>
         </div>
       )}
     </>

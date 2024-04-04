@@ -20,7 +20,7 @@ const McCourse = () => {
               alt=""
               src={ph_mcStudent}
             />
-            <p className="w-full rounded-br-lg rounded-bl-lg md:w-full text-black ml-[120px]  md:-mt-5 md:ml-[12rem] font-semibold md:text-2xl absolute   md:transform -translate-x-1/2 -translate-y-1/2 py-1 px-2 bg-white ">
+            <p className="w-full rounded-br-lg rounded-bl-lg text-black ml-[120px]  md:-mt-5 md:ml-[12rem] font-semibold md:text-2xl absolute   md:transform -translate-x-1/2 -translate-y-1/2 py-1 px-2 bg-white ">
               Diploma in pharmacy (2 years)
             </p>
           </div>

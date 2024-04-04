@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <>
       <div className="p-2 md:p-10 md:flex justify-between md:bg-gray-200 border">
-        <div className="md:w-[25%] w-full  border-gray-500 bg-gray-200 md:border-none p-5 md:p-0">
+        <div className="md:w-[25%] w-full  mt-2 md:mt-0 border-gray-500 bg-gray-200 md:border-none p-5 md:p-0">
           <h2 className="font-bold text-2xl">About Us</h2>
-          <p className="mt-2  ">
+          <p className="mt-2 ">
             Veerbhadreshwar College Of Pharmacy is managed by Veerbhadreshwar
             Education Trust. The Trust was established in the year 2017 to
             provide quality education in the field of health sciences.
@@ -34,7 +34,7 @@ const Footer = () => {
             <p className="">{inst}</p>
           ))}
         </div>
-        <div className=" border-gray-500 bg-gray-200 md:border-none mt-5 md:mt-0 p-5 md:p-0">
+        <div className=" border-gray-500 mb-2 md:mb-0 bg-gray-200 md:border-none mt-5 md:mt-0 p-5 md:p-0">
           <div className="">
             <div className="flex items-center">
               <FontAwesomeIcon icon={faHome} />

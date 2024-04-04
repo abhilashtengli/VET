@@ -6,6 +6,7 @@ import { facility } from "../../Utils/Constants";
 import useLoading from "../Hooks/useLoading";
 import HomeShimmer from "../Shimmer/HomeShimmer";
 import PhotoGallery from "../ChildComponent/PhotoGallery";
+import ScrollToTopButton from "../ScrollToTopButton";
 
 const Facilities = () => {
   const isLoading = useLoading(true, 300);
@@ -31,6 +32,7 @@ const Facilities = () => {
           </div> */}
           <PhotoGallery input={facility} images={ph_student} />
           <Footer />
+          <ScrollToTopButton />
         </div>
       )}
     </>
