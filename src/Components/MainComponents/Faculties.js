@@ -17,10 +17,10 @@ const Faculties = () => {
       ) : (
         <div>
           <Header />
-          <ImageScroller images={images}/>
+          <ImageScroller images={images} />
           <McCourse />
           <Footer />
-          <ScrollToTopButton/>
+          <ScrollToTopButton />
         </div>
       )}
     </>

@@ -24,8 +24,8 @@ const Contact = () => {
       <div className="p-10 h-full">
         <Address />
       </div>
-      <div className="flex flex-col-reverse mb-5 justify-center md:p-5 md:flex md:flex-row md:justify-evenly">
-        <div className="bg-gray-200 w-fit border border-black md:ml-0  rounded-lg p-5">
+      <div className="flex flex-col-reverse mb-5 justify-between md:p-5  md:flex md:flex-row md:justify-evenly">
+        <div className="bg-gray-200 w-fit md:ml-0 md:w-80  rounded-lg p-5">
           <div className="border bg-white my-5 rounded-lg p-2">
             <h1 className="text-2xl">Contact Details</h1>
             <p className="text-gray-600">
@@ -51,7 +51,7 @@ const Contact = () => {
               chairmanvetklbg@gmail.com
             </p>
           </div>
-          <div className="border border-red-500 bg-white my-5 rounded-lg p-2">
+          <div className=" bg-white my-5 rounded-lg p-2">
             <h1 className="text-2xl">Follow Us</h1>
             <ul className="flex text-1xl -ml-2">
               {faIcon.map((faicon) => (
@@ -64,13 +64,13 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <div className="border border-red-500 mt-10 md:mt-0 mb-5 md:mb-0 md:ml-0">
+        <div className="mt-10 md:mt-0 mb-5 md:mb-0 md:ml-0">
           <Formik
             initialValues={{ userName: "", userEmail: "", message: "" }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            <form className="border bg-gray-200  py-10 w-full md:w-96 p-5 rounded-lg">
+            <form className="border bg-gray-200  py-10 w-full md:w-80 p-5  rounded-lg">
               <label htmlFor="userName" className="mb-5 ml-2 font-semibold">
                 Name
               </label>

@@ -17,7 +17,7 @@ const McAbout = () => {
   return (
     <>
       <div className=" bg-gray-200 md:p-5  py-20">
-        <h1 className=" text-3xl pl-6  md:text-start md:pl-32 ml-4  md:w-2/5 py-2 font-semibold">
+        <h1 className=" text-3xl pl-6  md:text-start lg:pl-32 ml-4  md:w-2/5 py-2 font-semibold">
           ABOUT US
         </h1>
         <div className="md:flex md:justify-evenly md:items-center ">

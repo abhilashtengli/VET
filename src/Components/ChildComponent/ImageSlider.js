@@ -1,26 +1,40 @@
 import React, { useState, useEffect } from "react";
-
+import { Transition } from "@headlessui/react";
 const ImageSlider = ({ images, interval }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
     }, interval);
 
     return () => clearInterval(intervalId);
-  }, [images.length, interval]);
+  }, []);
 
   return (
-    <div className="relative overflow-hidden  md:h-[32rem]">
-      <div
-        className="flex transition-transform duration-1000  ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((image, index) => (
-          <img key={index} src={image} alt="" className="w-full" />
-        ))}
-      </div>
+    <div className="relative w-full h-72 md:h-[26rem] lg:h-[28rem] overflow-hidden">
+      {images.map((image, index) => (
+        <Transition
+          as="div"
+          key={index}
+          show={index === currentIndex}
+          enter="transition ease-out duration-500 transform"
+          enterFrom="translate-x-full"
+          enterTo="translate-x-0"
+          leave="transition ease-in duration-500 transform"
+          leaveFrom="translate-x-0"
+          leaveTo="-translate-x-full"
+          className="absolute inset-0 w-full h-full"
+        >
+          <img
+            src={image}
+            alt={`Banner ${index + 1}`}
+            className="w-screen h-full object-fill"
+          />
+        </Transition>
+      ))}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 const CollegeVision = () => {
   return (
     <>
-      <div className="w-full md:w-[40%] ">
+      <div className="w-full lg:w-[40%] ">
         <div className=" px-5">
           <div className=" m-2 my-8">
             <h1 className="bg-gray-200 border rounded-r-2xl text-gray-800 text-lg font-bold pl-3 ">

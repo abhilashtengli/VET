@@ -38,7 +38,7 @@ const Header = () => {
     <>
       <div
         ref={modalRef}
-        className="z-10 sticky w-full top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 bg-opacity-75 backdrop-blur-sm items-center md:py-2"
+        className="z-10 sticky w-screen top-0 flex justify-between bg-green-100 md:z-10 shadow-lg md:sticky md:top-0 bg-opacity-75 backdrop-blur-sm items-center md:py-2"
       >
         <Link to="/">
           <img
@@ -50,7 +50,7 @@ const Header = () => {
 
         <div className="flex  md:mr-24">
           {/* Hamburger Menu for mobile */}
-          <div className="mr-5 block md:hidden">
+          <div className="mr-5 md:mr-0 block lg:hidden">
             <button
               className="text-gray-800 focus:outline-none"
               onClick={toggleMenu}
@@ -66,7 +66,7 @@ const Header = () => {
           </div>
           {/* Menu Items */}
           <ul
-            className={`absolute flex flex-col md:flex-row pb-2 justify-start left-0 mt-12 md:mt-0 w-full bg-white md:bg-transparent md:flex md:relative ${
+            className={`absolute flex flex-col lg:flex-row pb-2 justify-start left-0 mt-12 lg:mt-0 w-full bg-white lg:bg-transparent lg:flex lg:relative ${
               showMenu ? "block" : "hidden"
             } md:mr-16`}
           >

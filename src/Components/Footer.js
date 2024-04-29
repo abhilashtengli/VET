@@ -9,8 +9,8 @@ import { InstTiming } from "../Utils/Constants";
 const Footer = () => {
   return (
     <>
-      <div className="p-2 md:p-10 md:flex justify-between md:bg-gray-200 border">
-        <div className="md:w-[25%] w-full  mt-2 md:mt-0 border-gray-500 bg-gray-200 md:border-none p-5 md:p-0">
+      <div className="p-2 lg:p-10  md:flex justify-between md:bg-gray-200 border">
+        <div className="md:w-[25%] w-full  mt-2 md:mt-0  bg-gray-200 md:border-none p-5 md:p-0">
           <h2 className="font-bold text-2xl">About Us</h2>
           <p className="mt-2 ">
             Veerbhadreshwar College Of Pharmacy is managed by Veerbhadreshwar
@@ -18,7 +18,7 @@ const Footer = () => {
             provide quality education in the field of health sciences.
           </p>
         </div>
-        <div className="md:w-[12%] mt-5 md:mt-0  border-gray-500 bg-gray-200 md:border-none p-5 md:p-0">
+        <div className="lg:w-[12%] mt-5 md:mt-0  border-gray-500 bg-gray-200 md:border-none p-5 md:p-0">
           <h2 className="font-bold md:ml-7 text-2xl">Quick Links</h2>
           <ul className="mt-2 md:ml-8">
             {navItems.map((item, index) => (
@@ -66,7 +66,7 @@ const Footer = () => {
         <h1 className=" text-white  md:w-1/2 text-center md:text-base w-full">
           2019 © Veerbhadreshwar Pharmacy College All Rights Reserved.
         </h1>
-        <div className="text-white md:w-1/2 flex items-center justify-center">
+        <div className="text-white md:w-1/2  flex items-center justify-center">
           <p className="text-xl">Social :</p>
           <ul className="flex  ml-5 text-2xl">
             {faIcon.map((faicon) => (

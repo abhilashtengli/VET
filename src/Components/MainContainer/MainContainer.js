@@ -12,7 +12,7 @@ const MainContainer = () => {
   return (
     <>
       <CollegeName />
-      <div className="flex-col-reverse md:flex-row flex md:justify-between">
+      <div className="flex-col-reverse lg:flex-row flex lg:justify-between">
         <CollegeVision />
         <CollegeImages />
       </div>
